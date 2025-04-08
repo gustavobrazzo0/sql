@@ -1,0 +1,11 @@
+-- Cidade com menor nome (alfabeticamente se empatar)
+SELECT CITY, LENGTH(CITY) AS NAME_LENGTH
+FROM STATION
+ORDER BY LENGTH(CITY), CITY
+FETCH FIRST 1 ROW ONLY;
+
+-- Cidade com maior nome (alfabeticamente se empatar)
+SELECT CITY, LENGTH(CITY) AS NAME_LENGTH
+FROM STATION
+ORDER BY LENGTH(CITY) DESC, CITY
+FETCH FIRST 1 ROW ONLY;
